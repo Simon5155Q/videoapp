@@ -19,6 +19,18 @@
   display: flex;
 }
 
+#videoStream{
+  display:flex;
+  justify-content: center;
+  align-items: center
+}
+video{
+  width:400px;
+  height:400px;
+  object-fit: cover;
+  
+}
+
 .options {
   padding: 1rem;
   display: flex;
