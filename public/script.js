@@ -22,7 +22,7 @@ function videoStreaming(stream, video){
     video.srcObject = stream;
     video.addEventListener("loadedmetadata", ()=>{
         video.play();
-        $("#videoStream").update(video);
+        $("#videoStream").append(video);
     });
 }
 $(function () {
