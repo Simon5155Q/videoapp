@@ -22,7 +22,8 @@
 #videoStream{
   display:flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  flex-direction: row;
 }
 video{
   width:400px;
