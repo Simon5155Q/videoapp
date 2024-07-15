@@ -16,7 +16,7 @@ navigator.mediaDevices.getUserMedia({
 }).then((stream)=>{
     mystream = stream;
     videoStreaming(mystream, myvideo);
-    socket.on("userconnected", (userId)=>{
+    socket.on("user-connected", (userId)=>{
         connectNewUser(userId, stream);
     })
 })
