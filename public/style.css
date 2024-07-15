@@ -51,6 +51,10 @@ video{
   margin: 0 0.5rem;
 }
 
+.black {
+  background-color: "red";
+}
+
 #show_chat {
   display: none;
 }
