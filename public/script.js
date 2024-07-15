@@ -62,6 +62,27 @@ $(function () {
             $("#chat_message").val("");
         }
     })
+    $("#stop_video").click(function(){
+        var enable = mystream.getVideoTracks()[0].enabled
+        if(enable){
+            mystream.getVideoTrack()[0].enabled = false
+            $("#stop_video").toggleClass("black")
+            
+        }
+        else{
+            mystream.getVideoTrack()[0].enabled = true
+        }
+    })
+    $("#mute_button").click(function(){
+        var muted = mystream.getAudioTracks()[0].enabled
+        if(muted){
+            mystream.getAudioTracks()[0].enabled = false
+            
+        }
+        else{
+           mystream.getAudioTracks()[0].enabled = true 
+        }
+    })
 
 })
 
