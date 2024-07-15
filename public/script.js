@@ -67,12 +67,12 @@ $(function () {
     $("#stop_video").click(function(){
         var enable = mystream.getVideoTracks()[0].enabled
         if(enable){
-            mystream.getVideoTrack()[0].enabled = false
+            mystream.getVideoTracks()[0].enabled = false
             $("#stop_video").toggleClass("black")
             
         }
         else{
-            mystream.getVideoTrack()[0].enabled = true
+            mystream.getVideoTracks()[0].enabled = true
         }
     })
     $("#mute_button").click(function(){
