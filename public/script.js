@@ -24,7 +24,7 @@ navigator.mediaDevices.getUserMedia({
             call.answer(stream);
             const video = document.createElement("video");
             call.on("stream", (stream) => {
-                videoStreaming(video, stream);
+                videoStreaming(stream, video);
             });
         });
 })
