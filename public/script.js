@@ -20,6 +20,13 @@ navigator.mediaDevices.getUserMedia({
         connectNewUser(userId, stream);
         console.log(connectNewUser(userId, stream));
     })
+    peer.on("call", (call) => {
+            call.answer(stream);
+            const video = document.createElement("video");
+            call.on("stream", (userVideoStream) => {
+                videoStreaming(video, userVideoStream);
+            });
+        });
 })
 
 function connectNewUser(userId, stream){
